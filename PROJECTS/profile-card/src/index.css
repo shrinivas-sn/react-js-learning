@@ -38,7 +38,7 @@ h1 {
   text-align: center;
 }
 
-.skill {
+.skills{
   padding: 2px 12px;
   border-radius: 5px;
   display: flex;
@@ -49,7 +49,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-button{
+.skill{
   height: 25px;
   width: auto;
   padding: 5px;
@@ -58,4 +58,12 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid rgb(25, 19, 19);
+  box-shadow: 2px 2px 2px rgb(65, 60, 60);
+}
+
+.skill:hover{
+  transition: all 0.3s;
+  cursor: pointer;
+  transform: scale(0.9);
 }

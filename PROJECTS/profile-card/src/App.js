@@ -5,10 +5,10 @@ function App() {
     <div className="card">
       <Image />
       <h1>Shrinivas Nemagoudar</h1>
-      <p class = "data">
+      <p className="data">
         I am a Student at KLE Technological universiyt Hubballi Currently
-        working as an Intern in Avantro Labs at KLE Tech Park Hubballi for 6 months
-        of Internship
+        working as an Intern in Avantro Labs at KLE Tech Park Hubballi for 6
+        months of Internship
       </p>
       <Skills />
     </div>
@@ -21,14 +21,22 @@ function Image() {
 
 function Skills() {
   return (
+    <div className="skills">
+      <Skill name="HTML 👍" />
+      <Skill name="CSS 👍" />
+      <Skill name="JavaScript 💬" />
+      <Skill name="Web Developer" />
+      <Skill name="Problem Solver" />
+      <Skill name="Intern 👊" />
+      <Skill name="Engineering 💬" />
+    </div>
+  );
+}
+
+function Skill(props) {
+  return (
     <div className="skill">
-      <button class="button">HTML 👍</button>
-      <button class="button">CSS 👍</button>
-      <button class="button">JavaScript 😑</button>
-      <button class="button">Web Developer</button>
-      <button class="button">Problem Solver</button>
-      <button class="button">Intern 👊</button>
-      <button class="button">Engineering 👍</button>
+      <p>{props.name}</p>
     </div>
   );
 }
