@@ -72,7 +72,7 @@ li:hover{
   justify-content: center;
   align-items: center;
 }
-#data-box{
+.data-box{
   height: 150px;
   width: 400px;
   background-color: skyblue;
@@ -90,6 +90,18 @@ p{
   width: 100%;
   color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+  text-decoration: none;
+  height: 30px;
+  width: auto;
+  background-color: rgb(59, 187, 237);
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 0px 5px 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer{

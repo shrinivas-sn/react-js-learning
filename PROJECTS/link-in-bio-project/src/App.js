@@ -64,14 +64,14 @@ function Links() {
     <div id="data-div">
       {myData.map(function (data) {
         return (
-          <div id="data-box">
+          <div className="data-box">
             <p>
               {" "}
               {data.id} {data.icon}
             </p>
             <p> {data.platform}</p>
             <p> {data.title}</p>
-            <a href={data.url} target="_blank">
+            <a href={data.url} target="_blank" rel ="noreferrer">
               <p>{data.platform}</p>
             </a>
           </div>
