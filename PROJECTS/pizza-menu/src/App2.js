@@ -1,28 +1,52 @@
-function App2(){
-    return(
-        <div className = "container2">
-            <Menu2 />
-        </div>
-    )
-};
+function App2() {
+  return (
+    <div>
+      <p id="title">This container is coded and designed by me</p>
+      <div className="container2">
+        <Menu2 />
+      </div>
+      <div className="footer-div">
+        <Footer />
+      </div>
+    </div>
+  );
+}
 
-function Menu2(){
-    return(
-        <div className = "menu2">
-            {pizzaData.map(function(menu){
-                return(
-                    <div className = "menu-box">
-                        <img className = "images2" src = {menu.photoName} alt={menu.photoName}></img>
-                        <div className = "menu-content">
-                            <p>{menu.name}</p>
-                            <p>{menu.ingredients}</p>
-                            <p>{menu.price}</p>
-                        </div>
-                    </div>
-                )
-            })}
-        </div>
-    )
+function Menu2() {
+  return (
+    <div className="menu2">
+      {pizzaData.map(function (menu) {
+        return (
+          <div className="menu-box">
+            <img
+              className="images2"
+              src={menu.photoName}
+              alt={menu.photoName}
+            ></img>
+            <div className="menu-content">
+              <p>{menu.name}</p>
+              <p>{menu.ingredients}</p>
+              <p>{menu.price}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
+  console.log(isOpen);
+
+  return (
+    <footer className="footer">
+      <pre>{new Date().toLocaleTimeString()} We're currently Open'</pre>
+    </footer>
+  );
 }
 
 const pizzaData = [
@@ -69,29 +93,5 @@ const pizzaData = [
     soldOut: false,
   },
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default App2;

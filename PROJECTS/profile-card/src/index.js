@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'; // index.css is present in the current folder which is imported
 import App from './App.js';
+import App2 from './App2.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App /><br></br>
+    <App2 />
   </React.StrictMode>
 );
 

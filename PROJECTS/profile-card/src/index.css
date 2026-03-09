@@ -67,3 +67,58 @@ h1 {
   cursor: pointer;
   transform: scale(0.9);
 }
+
+.card2{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 600px;
+}
+.container{
+  width: 450px;
+  margin-left: 30px;
+  border: 4px solid #222;
+}
+
+#name{
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+#title{
+  width: 90%;
+  text-wrap:initial;
+  text-align: center;
+}
+
+.skills2{
+  padding: 2px 12px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+.skill-box{
+  height: 25px;
+  width: auto;
+  background: linear-gradient(to right, rgb(188, 164, 164), rgb(106, 184, 85));
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(25, 19, 19);
+  box-shadow: 2px 2px 2px rgb(65, 60, 60);
+  margin: 10px;
+}
+.skill-box:hover{
+  transition: all 0.3s;
+  cursor: pointer;
+  transform: scale(0.9);
+}

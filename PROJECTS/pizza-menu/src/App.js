@@ -47,8 +47,8 @@ function App() {
   return (
     <div>
       <Header />
-      <Menu />
-      <Footer />
+      <Menu /><br></br>
+      
     </div>
   );
 }
@@ -79,20 +79,6 @@ function Menu() {
         })}
         ;
       </div>
-
-      {/* <Pizza
-        name="Pizza Spinaci"
-        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-        photoName="pizzas/spinaci.jpg"
-        price={10}
-      />
-
-      <Pizza
-        name="Pizza Funghi"
-        ingredients="Tomato, Mushrooms"
-        price={12}
-        photoName="pizzas/funghi.jpg"
-      /> */}
     </main>
   );
 }
@@ -111,18 +97,5 @@ function Pizza(props) {
   );
 }
 
-function Footer() {
-  const hour = new Date().getHours();
-  const openHour = 12;
-  const closeHour = 22;
-  const isOpen = hour >= openHour && hour <= closeHour;
-  console.log(isOpen);
-
-  return (
-    <footer className="footer">
-      <pre>{new Date().toLocaleTimeString()} We're currently Open'</pre>
-    </footer>
-  );
-}
 
 export default App;
