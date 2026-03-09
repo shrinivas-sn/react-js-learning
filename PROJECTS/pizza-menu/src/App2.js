@@ -1,7 +1,7 @@
 function App2() {
   return (
     <div>
-      <p id="title">This container is coded and designed by me</p>
+      <p id="title">This container is Coded and Designed by me</p>
       <div className="container2">
         <Menu2 />
       </div>
