@@ -42,7 +42,7 @@ function LightOn(){
     const [isLightOn, setIsLightOn]  = useState(true);
     return(
         <div>
-            <button onClick={function(){setIsLightOn(!isLightOn)}} style = {{background: isLightOn ? 'blue' : 'yellow'}}>
+            <button onClick={function(){setIsLightOn(!isLightOn)}} style = {{background: isLightOn ? 'pink' : 'yellow'}}>Toggle
             </button>
         </div>
     )
