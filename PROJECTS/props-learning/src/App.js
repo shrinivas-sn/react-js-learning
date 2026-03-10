@@ -1,38 +1,36 @@
 function App() {
-  return(
+  return (
     <div>
-      {pizzaData.map(function(pizza){
-        return(
-            <Pizza 
-      name = {pizza.name}
-      price = {pizza.price}
-      ingredients = {pizza.ingredients}
-      soldOut = {pizza.soldOut}
-      photoName = {pizza.photoName}
-    />
+      {pizzaData.map(function (pizza) {
+        return (
+          <Pizza
+            name={pizza.name}
+            price={pizza.price}
+            ingredients={pizza.ingredients}
+            soldOut={pizza.soldOut}
+            photoName={pizza.photoName}
+          />
         );
       })}
     </div>
   );
-} 
-
-
+}
 
 function Pizza(props) {
-  return(
-    <div>
-      <img src = {props.photoName} alt = {pizzaData.name}></img>
-      <p>{props.name}</p>
-      <p>{props.price}</p>
-      <p>{props.ingredients}</p>
-      <p>{props.soldOut}</p>
+  return (
+    <div className="container">
+      <div className="image">
+        <img src={props.photoName} alt={pizzaData.name}></img>
+      </div>
+      <div className="content">
+        <p>{props.name}</p>
+        <p>{props.price}</p>
+        <p>{props.ingredients}</p>
+        <p>{props.soldOut}</p>
+      </div>
     </div>
   );
 }
-
-
-
-
 
 const pizzaData = [
   {
