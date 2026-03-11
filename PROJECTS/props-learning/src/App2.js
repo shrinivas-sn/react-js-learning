@@ -99,7 +99,7 @@ function Student(details) {
 }
 
 function StudentCard(props) {
-    const [isPresent, setIsPresent] = useState(false);
+  const [isPresent, setIsPresent] = useState(false);
   return (
     <div className="container2">
       <p className="details">Name: {props.name}</p>
@@ -107,10 +107,23 @@ function StudentCard(props) {
       <p className="details">Branch: {props.branch}</p>
       <p className="details">Campus: {props.campus}</p>
       <p className="details">Status: {props.status}</p>
-      <button onClick={function(){setIsPresent(!isPresent)}} style={{backgroundColor: isPresent ? "lightgreen" : "yellow"}}>
-        {isPresent ? 'Present' : 'Mark Present'}
-      </button>
+      <Button isPresent={isPresent} setIsPresent={setIsPresent} />
+      <br />
     </div>
+  );
+}
+
+function Button(button) {
+  return (
+    <button
+      className="button"
+      onClick={function () {
+        button.setIsPresent(!button.isPresent);
+      }}
+      style={{ backgroundColor: button.isPresent ? "green" : "yellow" }}
+    >
+      {button.isPresent ? "Present" : "Mark Attendence"}
+    </button>
   );
 }
 

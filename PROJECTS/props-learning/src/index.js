@@ -1,15 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App.js';
-import App2 from './App2.js';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "./App3.css";
+import App from "./App.js";
+import App2 from "./App2.js";
+import App3 from "./App3.js";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App /><br></br>
+    <App />
+    <br></br>
     <App2 />
-  </React.StrictMode>
+    <App3 />
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
