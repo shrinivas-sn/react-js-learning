@@ -36,7 +36,6 @@ function App() {
   }
   return (
     <div className="app">
-      hi
       <FriendsList />
       {showAddFriend && <FormAddFriend />}
       <Button onClick={handleShowAddFriend}>
