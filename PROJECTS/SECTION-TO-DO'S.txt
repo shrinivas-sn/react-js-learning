@@ -1,0 +1,7 @@
+section to cover
+11. how react works
+12. effects and data fetching
+13. custom hooks ref, more state
+17. react router, building spa world wise
+    context api, 
+18. context api some important topics
