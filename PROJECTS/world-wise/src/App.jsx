@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "./pages/AppLayout.jsx";
 import HomePage from "./pages/Homepage.jsx";
-import Login from "./pages/Login.jsx";
+import Product from "./pages/Product.jsx";
 import Pricing from "./pages/Pricing.jsx";
+import Login from "./pages/Login.jsx";
 import NotFound from "./pages/PageNotFound.jsx";
 function App() {
   return (
@@ -10,9 +11,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="home" element={<HomePage />} />
+        <Route path="pricing" element={<Pricing />} />
+        <Route path="product" element={<Product />} />
         <Route path="appLayout" element={<AppLayout />} />
         <Route path="login" element={<Login />} />
-        <Route path="pricing" element={<Pricing />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

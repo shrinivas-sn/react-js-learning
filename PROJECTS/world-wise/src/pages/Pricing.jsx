@@ -9,7 +9,7 @@ export default function Pricing() {
           <h2>
             Simple pricing.
             <br />
-            Just $9/month.
+            Just 500rs/month.
           </h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel
