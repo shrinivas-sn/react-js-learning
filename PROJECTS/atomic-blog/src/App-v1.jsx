@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { faker } from "@faker-js/faker";
 import {PostProvider, PostContext} from "./PostContext";
 
@@ -10,7 +10,6 @@ function createRandomPost() {
 }
 
 //1) create a context
-const PostContext = createContext();
 
 function App() {
   const [isFakeDark, setIsFakeDark] = useState(false);
