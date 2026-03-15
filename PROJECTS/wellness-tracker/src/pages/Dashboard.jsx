@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 export default function Dashborad() {
   return (
-    <div>
+    <h1>
       Dashborad Page
       <NavPage />
-    </div>
+    </h1>
   );
 }

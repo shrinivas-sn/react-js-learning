@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Router, NavLink } from "react-router-dom";
 function App() {
   return (
     <div>
-      hello
+      <h1>Hello App</h1>
       <BrowserRouter>
         <Router>
          <Route path="/" element={<HomePage />} />
