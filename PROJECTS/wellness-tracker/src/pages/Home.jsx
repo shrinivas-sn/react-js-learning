@@ -30,7 +30,7 @@ function Cards() {
 function Card(card) {
   return (
     <div>
-      <p>{card.id}. {card.title}</p><br />
+      <p>{card.id}. {card.title}:</p><br />
       <p>{card.description}</p>
     </div>
   );

@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   height: 10vh;
@@ -14,7 +14,7 @@
   z-index: 1;
 }
 
-.navlist{
+.navlist {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -25,7 +25,7 @@
 }
 
 .navbtn {
-  height:30px;
+  height: 30px;
   width: 100%;
   padding: 5px;
   text-decoration: none;
@@ -37,8 +37,10 @@
 }
 
 .navbtn:hover {
-  transition: all 0.15s ease-in-out;
+  transition: all 0.2s ease-in-out;
   transform: translateY(-3px);
   text-decoration: underline;
+  border-radius: 10px;
+  /* border: 1px solid white; */
+  transform: scale3d(1.1, 1.1, 1.1);
 }
-
