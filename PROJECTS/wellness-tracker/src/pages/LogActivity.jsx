@@ -3,6 +3,7 @@ import { useState } from "react";
 
 //Main form container
 export default function LogActivity() {
+  const [name, setName] = useState("");
   const [steps, setSteps] = useState();
   const [water, setWater] = useState();
   const [sleep, setSleep] = useState();
@@ -13,6 +14,7 @@ export default function LogActivity() {
     e.preventDefault();
     const dailyLog = {
       date: new Date().toLocaleDateString(),
+      name: name,
       steps: steps,
       water: water,
       sleep: sleep,
@@ -30,6 +32,15 @@ export default function LogActivity() {
       <h1>This is log activity</h1>
       <form onSubmit={handleSubmit}>
         <div className={styles.formdiv}>
+          <p>User Name</p>
+          <input
+            type="text"
+            value={name}
+            onChange={function (event) {
+              setName(event.target.value);
+            }}
+            placeholder="Enter your Name"
+          ></input>
           <p>Steps walked</p>
           <input
             type="number"
