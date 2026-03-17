@@ -1,7 +1,20 @@
 import styles from "./Dashboard.module.css";
+import { useState, useEffect } from "react";
 export default function Dashboard() {
   const data = JSON.parse(localStorage.getItem("dailyLog")) || [];
   const userName = data.length > 0 ? data[0].name : "User";
+  const [quote, setQuote] = useState("Loading a quote...");
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/quotes/random")
+      .then((response) => response.json())
+      .then((data) =>
+        setTimeout(() => {
+          setQuote(data.quote);
+        }, 1500),
+      );
+  }, []);
+
   let totalStepsCount = 0;
   let totalWaterIntake = 0;
   let totalSleepHours = 0;
@@ -13,7 +26,7 @@ export default function Dashboard() {
     averageMoodScore = (averageMoodScore + Number(data[i].mood)) / 5;
   }
   return (
-    <div className={styles.dasboard}>
+    <div className={styles.dashboard}>
       <h1>Dashborad Page</h1>
       <div className={styles.dashboardcard}>
         <h2>Summary of {userName}'s total activity:</h2>
@@ -21,6 +34,10 @@ export default function Dashboard() {
         <p>2. Total Water intake is: {totalWaterIntake} glasses.</p>
         <p>3. Total Sleep hours is: {totalSleepHours} hours.</p>
         <p>4. Average Mood score is: {averageMoodScore}.</p>
+      </div>
+      <div className={styles.dashboardcard}>
+        <h2>Today's motivational quote:</h2>
+        <h2 className={styles.quote}>{quote}</h2>
       </div>
     </div>
   );
