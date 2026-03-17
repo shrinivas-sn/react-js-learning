@@ -30,15 +30,19 @@ export default function Dashboard() {
       <h1>Dashborad Page</h1>
       <div className={styles.container}>
         <div className={styles.dashboardcard}>
-          <h2>Summary of {userName}'s total activity:</h2>
-          <p>1. Total Steps walked: {totalStepsCount}</p>
-          <p>2. Total Water intake is: {totalWaterIntake} glasses.</p>
-          <p>3. Total Sleep hours is: {totalSleepHours} hours.</p>
-          <p>4. Average Mood score is: {averageMoodScore}.</p>
+          <h2 className={styles.subtitle}>
+            Summary of {userName}'s total activity:
+          </h2>
+          <div className={styles.content}>
+            <p>1. Total Steps walked: {totalStepsCount}</p>
+            <p>2. Total Water intake is: {totalWaterIntake} glasses.</p>
+            <p>3. Total Sleep hours is: {totalSleepHours} hours.</p>
+            <p>4. Average Mood score is: {averageMoodScore}.</p>
+          </div>
         </div>
         <div className={styles.quotecard}>
-          <h2>Today's motivational quote:</h2>
-          <h3 className={styles.quote}>{quote}</h3>
+          <h2 className={styles.subtitle}>Today's motivational quote:</h2>
+          <h3 className={styles.content}>{quote}</h3>
         </div>
       </div>
     </div>

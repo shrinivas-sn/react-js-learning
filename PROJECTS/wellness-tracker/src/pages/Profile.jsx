@@ -14,7 +14,7 @@ export default function Profile() {
     <div className={styles.container}>
       <h1>Profile Page</h1>
       <div className={styles.profilecard}>
-        <div>{userProfile}'s profile details</div>
+        <h2 className={styles.profiletitle}>{userProfile}'s profile details</h2>
         <div className={styles.profilephoto}></div>
         <div>
           Member since: {joinedDate}
